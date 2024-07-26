@@ -26,4 +26,15 @@ addList.addEventListener("click", e => {
     toDo.appendChild(time);
     section.appendChild(toDo);
     console.log(toDo)
+
+    // 加入完成、刪除按鈕
+    let doneBtn = document.createElement("button");
+    doneBtn.innerHTML = `<span class="material-symbols-outlined">check_small</span>`;
+    doneBtn.classList.add("doneBtn");
+    let delBtn = document.createElement("button");
+    delBtn.innerHTML = `<span class="material-symbols-outlined">delete</span>`
+    delBtn.classList.add("delBtn")
+    toDo.appendChild(doneBtn);
+    toDo.appendChild(delBtn);
+
 })
