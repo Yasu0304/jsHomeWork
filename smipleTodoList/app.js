@@ -8,6 +8,7 @@ addList.addEventListener("click", e => {
 
     //取得資料
     let form = e.target.parentElement;
+    console.log(form.children) //預期會找到表單裡的子元素，HTMLCollection
     let toDoText = form.children[0].value;
     let toDoM = form.children[1].value;
     let toDoD = form.children[2].value;
@@ -32,7 +33,10 @@ addList.addEventListener("click", e => {
     doneBtn.innerHTML = `<span class="material-symbols-outlined">check_small</span>`;
     doneBtn.classList.add("doneBtn");
     doneBtn.addEventListener("click", e => {
-        console.log(e.target.children);
+        console.log(e.target);//有時會按到按鈕有時會按到icon，所以在css的時候要把按到icon的動作取消
+        console.log(e.target.parentElement)
+        let todoItem = e.target.parentElement; // 點下按鈕要讓整個todo作用
+        todoItem.classList.add("done");
     })
     let delBtn = document.createElement("button");
     delBtn.innerHTML = `<span class="material-symbols-outlined">delete</span>`
