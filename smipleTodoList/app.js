@@ -31,10 +31,14 @@ addList.addEventListener("click", e => {
     let doneBtn = document.createElement("button");
     doneBtn.innerHTML = `<span class="material-symbols-outlined">check_small</span>`;
     doneBtn.classList.add("doneBtn");
+    doneBtn.addEventListener("click", e => {
+        console.log(e.target.children);
+    })
     let delBtn = document.createElement("button");
     delBtn.innerHTML = `<span class="material-symbols-outlined">delete</span>`
     delBtn.classList.add("delBtn")
     toDo.appendChild(doneBtn);
     toDo.appendChild(delBtn);
+
 
 })
