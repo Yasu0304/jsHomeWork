@@ -1,12 +1,15 @@
 .todo {
   display: flex;
 }
+.todo .toDoText {
+  width: 40%;
+}
 
 button span {
   pointer-events: none;
 }
 
 .done {
-  background-color: coral;
+  background-color: rgb(255, 255, 255);
   opacity: 0.2;
 }/*# sourceMappingURL=style.css.map */
